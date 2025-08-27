@@ -18,7 +18,24 @@ reuest2 = QLabel("a")
 reuest3 = QLabel("x")
 reuest4 = QLabel("c")
 
+app.setStyleSheet("""
 
+    
+    
+    QPushButton
+    {
+        font-size: 25px;
+        font-family = Impact;
+        border-style: groove;
+        border-width: 3px;
+        border-color: black;
+    }
+    QPushButton
+    {
+        color: green;
+    }
+    
+""")
 # def popular_actours():
 #     response3 = requests.get("https://api.themoviedb.org/3/person/popular", headers=headers)
 #     result3 = response3.json()
@@ -75,26 +92,26 @@ def search():
     pixmap.loadFromData(response_img.content)
     reuest2.setPixmap(pixmap)
 
-def popular_actours_window():
+# def popular_actours_window():
+#
+#     window2 = QWidget()
+#     window2.resize(700,600)
+#     window2.setWindowTitle("Популярны актори")
+#     v = QHBoxLayout
+#     apr = QLabel("first")
+#     brp = QLabel("second")
+#     crp = QLabel ("third")
+#     v.addWidget(apr. alignment == Qt.AlignCenter)
+#     v.addWidget(brp)
+#     v.addWidget(crp)
+#     h1.setLayOut(v)
 
-    window2 = QWidget()
-    window2.resize(700,600)
-    window2.setWindowTitle("Популярны актори")
-    v = QHBoxLayout
-    apr = QLabel("first")
-    brp = QLabel("second")
-    crp = QLabel ("third")
-    v.addWidget(apr. alignment == Qt.AlignCenter)
-    v.addWidget(brp)
-    v.addWidget(crp)
-    h1.setLayOut(v)
+    #
+    #
+    # window2.show()
+    # return window2
 
-
-
-    window2.show()
-    return window2
-
-reqest1_3.clicked.connect(popular_actours_window)
+# reqest1_3.clicked.connect(popular_actours_window)
 h1 = QVBoxLayout()
 h1.addWidget(reqest1)
 h1.addWidget(reqest1_2)
