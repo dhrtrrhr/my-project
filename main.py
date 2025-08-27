@@ -10,7 +10,7 @@ window = QWidget()
 window.resize(700,600)
 reqest1 = QPushButton("Пошук")
 reqest1_2 = QLineEdit()
-reqest1_3 = QPushButton("Popular Films:")
+reqest1_3 = QPushButton("Popular Authors:")
 
 reqest1_4 = QTextEdit()
 
@@ -81,17 +81,19 @@ def popular_actours_window():
     window2.resize(700,600)
     window2.setWindowTitle("Популярны актори")
     v = QHBoxLayout
-    a = QLabel("a")
-    b = QLabel("b")
-    c = QLabel ("c")
-    v.addWidget(a)
-    v.addWidget(b)
-    v.addWidget(c)
-    v.setL
+    apr = QLabel("first")
+    brp = QLabel("second")
+    crp = QLabel ("third")
+    v.addWidget(apr. alignment == Qt.AlignCenter)
+    v.addWidget(brp)
+    v.addWidget(crp)
+    h1.setLayOut(v)
+
 
 
     window2.show()
     return window2
+
 reqest1_3.clicked.connect(popular_actours_window)
 h1 = QVBoxLayout()
 h1.addWidget(reqest1)
