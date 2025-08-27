@@ -18,31 +18,59 @@ reuest2 = QLabel("a")
 reuest3 = QLabel("x")
 reuest4 = QLabel("c")
 request5 = QLabel("v")
+
+
 app.setStyleSheet("""
-
-
-
-    QPushButton
-    {
-        font-size: 25px;
-        font-family: Impact;
-        border-style: groove;
-        border-width: 3px;
-        border-color: black;
+    QWidget {
+        background-color: #f0f0f0;   /* Світло-сірий фон вікна */
+        font-family: Segoe UI;
+        font-size: 16px;
+        color: #222;
     }
-    QPushButton
-    {
-        color: green;
-    }
-    QPushButton:hover{
-        background-color: A9A9A9;
-    }
-    
-    
 
+    QPushButton {
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #4CAF50;   /* зелена кнопка */
+        color: white;
+        border-radius: 10px;
+        padding: 8px 16px;
+        border: 2px solid #388E3C;
+    }
+    QPushButton:hover {
+        background-color: #45a049;   /* темніший зелений при наведенні */
+    }
+    QPushButton:pressed {
+        background-color: #2e7031;   /* ще темніший при кліку */
+    }
+
+    QLineEdit {
+        background-color: white;
+        border: 2px solid #aaa;
+        border-radius: 8px;
+        padding: 6px;
+        font-size: 16px;
+    }
+    QLineEdit:focus {
+        border: 2px solid #4CAF50;
+    }
+
+    QTextEdit {
+        background-color: white;
+        border: 2px solid #aaa;
+        border-radius: 8px;
+        padding: 6px;
+        font-size: 15px;
+    }
+    QTextEdit:focus {
+        border: 2px solid #4CAF50;
+    }
+
+    QLabel {
+        font-size: 18px;
+        color: #333;
+    }
 """)
-
-
 def popular_actours():
     response3 = requests.get("https://api.themoviedb.org/3/person/popular", headers=headers)
     result3 = response3.json()
